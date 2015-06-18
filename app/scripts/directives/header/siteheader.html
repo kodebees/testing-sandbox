@@ -24,9 +24,14 @@
 
                 <form class="navbar-form navbar-right">
                      <div class="form-group">
+
                           <button type="button" class="btn btn-success " ui-sref=".signupform">Signup</button>
 
-                          <button type="button" class="btn btn-primary " ui-sref=".signinform">SignIn</button>
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">SignIn <span class="caret"></span></button>
+                         <ul class="dropdown-menu" role="menu">
+                             <li><a ui-sref=".signinform">Company owner</a></li>
+                             <li><a >Dispatcher</a></li>
+                         </ul>
                     </div>
                 </form>
 

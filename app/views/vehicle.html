@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-2">
         <div class="panel panel-default" style="width:100%">
             <div class="panel-heading text-center">
                 Vehicle
@@ -17,40 +17,101 @@
                 </table>
             </div>
         </div>
-        <button type="button" class="btn btn-primary" ui-sref=".adduser"><span class="glyphicon glyphicon-plus"></span> Add User</button>
+        <div class="text-center">
+        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add Vehicle</button>
+        </div>
     </div>
-    <div class="col-lg-9">
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading ">
+                Vehicle Information
             </div>
-            <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Remember me
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Sign in</button>
-                </div>
-            </div>
-        </form>
+            <div class="panel-body text-center ">
 
+                <form class="form-horizontal" role="form"  name="company" ng-submit="users()" >
+
+                    <div class="form-group">
+                        <label for="VehicleID" class="col-sm-5 control-label">Vehicle ID: </label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Vehicle ID">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="RegNum" class="col-sm-5 control-label">Registration Number: </label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Registration Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Passengers" class="col-sm-5 control-label">Passengers:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Color" class="col-sm-5 control-label">Color:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Type" class="col-sm-5 control-label">Type:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>Tata Indica</option>
+                                <option>Tata Indigo</option>
+                                <option>Maruti Omni</option>
+                                <option>innova</option>
+                                <option>Mahindra Logan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Bags" class="col-sm-5 control-label">Bags:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputEnabled" class="col-sm-5 control-label">Enabled:</label>
+                        <div class="col-sm-1">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-7">
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
 
-
+         <div class="text-center">
+                <button type="button" class="btn btn-primary" ui-sref="site.formwizard.users"> <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous  </button>
+                <button type="button" class="btn btn-primary" ui-sref="site.formwizard.trail">Next   <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+         </div>
     </div>
 </div>

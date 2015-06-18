@@ -8,9 +8,7 @@
  */
 angular.module('sbAdminApp')
   .controller('CompanyCtrl', ['$scope', '$timeout','$state', function ($scope, $timeout,$state) {
-$scope.companyinfo=function(){
-
-    alert("hi");
+$scope.companyInfo=function(){
 
      $state.go('site.formwizard.users');
 }
