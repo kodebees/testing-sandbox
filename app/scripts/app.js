@@ -12,7 +12,7 @@ angular
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
-    'angular-loading-bar',
+    'angular-loading-bar'
   ])
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
     
@@ -33,7 +33,7 @@ angular
                         {
                             name:'sbAdminApp',
                             files:[
-                                'scripts/directives/header/header.js',
+                                'scripts/directives/header/header.js'
                             ]
                         }),
                         $ocLazyLoad.load(
@@ -47,22 +47,22 @@ angular
                             {
                                 name:'ngAnimate',
                                 files:['../bower_components/angular-animate/angular-animate.js']
-                            })
+                            }),
                     $ocLazyLoad.load(
                         {
                             name:'ngCookies',
                             files:['bower_components/angular-cookies/angular-cookies.js']
-                        })
+                        }),
                     $ocLazyLoad.load(
                         {
                             name:'ngResource',
                             files:['bower_components/angular-resource/angular-resource.js']
-                        })
+                        }),
                     $ocLazyLoad.load(
                         {
                             name:'ngSanitize',
                             files:['bower_components/angular-sanitize/angular-sanitize.js']
-                        })
+                        }),
                     $ocLazyLoad.load(
                         {
                             name:'ngTouch',
@@ -91,7 +91,7 @@ angular
             }
         })
         .state('site.signupform',{
-            templateUrl:'views/signupform.html',
+            templateUrl:'views/registration/signupform.html',
             url:'/signupform',
             controller:'SignUpCtrl',
             resolve: {
@@ -110,7 +110,7 @@ angular
             url:'/login'
         })
         .state('site.register1',{
-            templateUrl:'views/activate.html',
+            templateUrl:'views/registration/activate.html',
             url:'/activate',
             controller:'ActivateCtrl',
             resolve: {
@@ -124,14 +124,14 @@ angular
 
         })
         .state('site.formwizard',{
-            templateUrl:'views/formwizard.html',
+            templateUrl:'views/registration/formwizard.html',
             url:'/formwizard'
         })
 
 
         .state('site.formwizard.company', {
             url: '/companydetails',
-            templateUrl: 'views/companydetails.html',
+            templateUrl: 'views/registration/companydetails.html',
             controller:'CompanyCtrl',
             resolve: {
                 loadMyFile:function($ocLazyLoad) {
@@ -145,17 +145,17 @@ angular
 
         .state('site.formwizard.users', {
             url: '/users',
-            templateUrl: 'views/users.html'
+            templateUrl: 'views/registration/users.html'
         })
 
         .state('site.formwizard.vehicle', {
             url: '/vehicle',
-            templateUrl: 'views/vehicle.html'
+            templateUrl: 'views/registration/vehicle.html'
         })
 
         .state('site.formwizard.trail', {
             url: '/trail',
-            templateUrl: 'views/start-trail.html',
+            templateUrl: 'views/registration/start-trail.html',
             controller:'TrailCtrl',
             resolve: {
                 loadMyFile:function($ocLazyLoad) {
