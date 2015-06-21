@@ -105,10 +105,18 @@ angular
 
         })
 
-        .state('site.signinform',{
-            templateUrl:'views/login.html',
+        .state('site.companyLogin',{
+            templateUrl:'views/company-login.html',
             url:'/login'
         })
+
+        .state('site.dispatcherLogin',{
+            templateUrl:'views/dispatcher-login.html',
+            url:'/login'
+        })
+
+
+
         .state('site.register1',{
             templateUrl:'views/registration/activate.html',
             url:'/activate',
@@ -244,7 +252,7 @@ angular
         url:'/blank'
     })
       .state('login',{
-        templateUrl:'views/pages/login.html',
+        templateUrl:'views/pages/dispatcher-login.html',
         url:'/login'
     })
       .state('dashboard.chart',{
@@ -295,6 +303,57 @@ angular
        templateUrl:'views/ui-elements/grid.html',
        url:'/grid'
    })
+
+
+
+
+        .state('dispatch_console', {
+            url:'/console',
+            /*resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:[
+                            'scripts/controllers/console/dispatcher-ctrl.js',
+                        ]
+                    })
+
+                }
+            },*/
+            views: {
+
+                // the main template will be placed here (relatively named)
+                '': { templateUrl: 'views/dispatcher/dispatcher-main.html'},
+              /*  controller:'DispatchCtrl',*/
+
+
+                // the child views will be defined here (absolutely named)
+                /*'newJob@dispatch_console': { template: 'Look I am a column!' },*/
+
+                // for column two, we'll define a separate controller
+                'newJob@dispatch_console': {
+                    templateUrl: 'views/dispatcher/newjob-now.html'},
+                    /*controller: 'scotchController'*/
+
+
+                    'map@dispatch_console': {
+                        templateUrl: 'views/dispatcher/map.html'},
+
+                        'jobDetails@dispatch_console': {
+                            templateUrl: 'views/dispatcher/active-assigned-unassignedjobs.html'
+                }
+
+
+            }
+        });
+
+
+
+
+
+
+
+
   }]);
 
     

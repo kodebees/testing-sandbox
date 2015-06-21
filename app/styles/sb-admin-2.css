@@ -18,11 +18,25 @@ body {
     background-color: #fff;
 }
 
+#page-wrapper-site{
+    /*padding: 0 15px;*/
+    min-height: 568px;
+    background-color: #fff;
+}
+
+
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
         margin: 0 0 0 250px;
         padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+
+    #page-wrapper-site {
+        position: inherit;
+        margin-top: 50px;
+     /*   padding: 0 15px;*/
         border-left: 1px solid #e7e7e7;
     }
 }
@@ -355,31 +369,44 @@ table.dataTable thead .sorting:after {
 
 
 
-/* style.css */
+/* style.css *//*
+
+*/
 /* Formwizard
-============================================================================= */
+============================================================================= *//*
+
 body                            { padding-top:20px; }
 
-/* form styling */
+*/
+/* form styling *//*
+
 #form-container                { background:#f5f5f5; margin-bottom:20px;
     border-radius:5px; }
 #form-container .page-header   { background:#f5f5f5; margin:0; padding:10px;
     border-top-left-radius:10px; border-top-right-radius:10px; }
 
-/* numbered buttons */
+*/
+/* numbered buttons *//*
+
 #status-buttons                 {  }
 #status-buttons a               { color:#000; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
 #status-buttons a:hover         { text-decoration:none; }
 
-/* we will style the span as the circled number */
+*/
+/* we will style the span as the circled number *//*
+
 #status-buttons span            { background:#fffff; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px;
     border-radius:50%; }
 
-/* active buttons turn light green-blue*/
+*/
+/* active buttons turn light green-blue*//*
+
 #status-buttons a.active span   { background:#f5f5f5; }
 
+*/
 /*Start -trail div
-=======================================*/
+=======================================*//*
+
 .trail-box{border: 1px solid #C9C9C9;
     padding: 10px 15px;
     border-radius: 5px;
@@ -388,4 +415,4 @@ body                            { padding-top:20px; }
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom:20px;
 
-}
+}*/
