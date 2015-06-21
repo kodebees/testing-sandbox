@@ -16,12 +16,12 @@
 
             <ul class="nav navbar-nav">
 
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">search jobs</button>
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">closed jobs</button>
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">customers</button>
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">Alarms</button>
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">Messages</button>
-                <button type="button" class="btn btn-warning navbar-btn" ui-sref=".signupform">Alerts</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="searchJobs()">search jobs</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="closedJobs()">closed jobs</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="createCustomer()">customers</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="alarms()">Alarms</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="messages()">Messages</button>
+                <button type="button" class="btn btn-warning navbar-btn" ng-click="alerts()">Alerts</button>
 
             </ul>
 
@@ -32,7 +32,7 @@
 
                <!-- <li>Date:19.06 06.42PM</li>
                 <li>Logged in as : User name</li>-->
-                <button type="button" class="btn btn-danger navbar-btn" ui-sref=".signupform">Log Out</button>
+                <button type="button" class="btn btn-danger navbar-btn" ui-sref="site.home">Log Out</button>
 
          </ul>
 

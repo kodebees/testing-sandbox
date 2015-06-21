@@ -7,9 +7,26 @@
  * Controller of the sbAdminApp
  */
 angular.module('sbAdminApp')
-  .controller('SignUpCtrl', ['$scope', '$timeout','$state', function ($scope, $timeout,$state) {
+  .controller('SignUpCtrl', ['$scope', '$timeout','$state','$modal', function ($scope, $timeout,$state,$modal) {
+
+
 $scope.register=function(){
      var url = window.location;
-     $state.go('site.register1');
+    alert("Res");
+    //$scope.dialogbox();
+    // $state.go('site.register1');
+    var modalInstance = $modal.open({
+        animation: true,
+        templateUrl: 'views/dispatcher/createcustomer.html',
+        // controller: 'ModalInstanceCtrl',
+        size: 'lg'
+
+    });
+    modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+    }, function () {
+       console.log('Modal dismissed at: ' + new Date());
+    });
 }
+
     }]);

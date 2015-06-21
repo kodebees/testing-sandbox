@@ -1,19 +1,20 @@
-<div class="row">
-    <div class="col-lg-12">
-        <form role="form"  name="searchCustomer" ng-submit="searchCustomer()" >
-        <div class="panel panel-default">
-            <div class="panel-heading text-center">
+
+<!--<div class="row">
+    <div class="col-lg-12">-->
+    <div class="modal-header">
                Customers
             </div>
-            <div class="panel-body">
+    <div class="modal-body">
+        <form role="form"  name="searchCustomer" ng-submit="searchCustomer()" >
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
+
                          <div class="form-group">
                              <label>Search:</label>
 
                              <div class="input-group">
 
-                                <input class="form-control">
+                                <input class="form-control" placeholder="9159053006">
                                 <span class="input-group-btn">
                                 <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
                                 </span>
@@ -22,60 +23,61 @@
 
                         </div>
                         <div>
-                            Following Info will displayed here:<br>
-                         Account ID<br>
-                         Name<br>
-                         Phone
+                            <p>Kathir</p>
+                            <p>s</p>
+                            <p>9159053006</p>
+
                       </div>
                     </div>
-                    <div class="col-lg-offset-1 col-lg-5">
+                    <div class="col-lg-5">
                         <button type="button" class="btn btn-primary" ui-sref=".createcustomer">Create</button>
                         <div class="personalsection">
                             <h5>Personal Account</h5>
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                      <div class="form-group">
                                         <label>AccountID:</label>
-                                        <input class="form-control">
+                                        <input class="form-control" placeholder="100001">
                                       </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Phone:</label>
-                                        <input class="form-control">
+                                        <input class="form-control" placeholder="9159053006">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>First Name:</label>
-                                        <input class="form-control">
+                                        <input class="form-control" placeholder="Kathir" >
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Last Name:</label>
-                                        <input class="form-control">
+                                        <input class="form-control" placeholder="s">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Address:</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <textarea class="form-control" rows="3" placeholder="xxxxx"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Info:</label>
-                                     <textarea class="form-control" rows="3"></textarea>
+                                     <textarea class="form-control" rows="3" placeholder="xxx"></textarea>
                                     </div>
                                 </div>
                             </div>
+<!--
                             <div class="row">
                                 <div class="col-lg-4">
                                      <div class="form-group">
@@ -122,6 +124,7 @@
                                 </div>
                             </div>
                         </div>
+-->
                             <div class="row text-center">
                                 <div class="col-lg-offset-2 col-lg-2">
                                     <button type="button" class="btn btn-default"><< Use</button>
@@ -134,7 +137,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <h4>Jobs for Phone Number: 9159053006</h4>
+                        <p>Jobs for Phone Number: 9159053006</p>
                         <div class="table-responsive">
                             <table class="table table-hover  table-bordered">
                                 <tbody>
@@ -160,8 +163,16 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
         </form>
+        </div>
+<!--
      </div>
 </div>
+-->
+
+<!--
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>-->

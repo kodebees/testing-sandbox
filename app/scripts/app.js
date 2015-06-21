@@ -107,12 +107,12 @@ angular
 
         .state('site.companyLogin',{
             templateUrl:'views/company-login.html',
-            url:'/login'
+            url:'/companylogin'
         })
 
         .state('site.dispatcherLogin',{
             templateUrl:'views/dispatcher-login.html',
-            url:'/login'
+            url:'/dispatcherlogin'
         })
 
 
@@ -309,27 +309,24 @@ angular
 
         .state('dispatch_console', {
             url:'/console',
-            /*resolve: {
-                loadMyFile:function($ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name:'sbAdminApp',
-                        files:[
-                            'scripts/controllers/console/dispatcher-ctrl.js',
-                        ]
-                    })
-
-                }
-            },*/
+            /**/
             views: {
 
                 // the main template will be placed here (relatively named)
-                '': { templateUrl: 'views/dispatcher/dispatcher-main.html'},
-              /*  controller:'DispatchCtrl',*/
+                '': { templateUrl: 'views/dispatcher/dispatcher-main.html',
+                    controller:'DispatchCtrl',
+                    resolve: {
+                        loadMyFile:function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name:'sbAdminApp',
+                                files:[
+                                    'scripts/controllers/console/dispatcher-ctrl.js',
+                                ]
+                            })
 
-
-                // the child views will be defined here (absolutely named)
-                /*'newJob@dispatch_console': { template: 'Look I am a column!' },*/
-
+                        }
+                    }
+                },
                 // for column two, we'll define a separate controller
                 'newJob@dispatch_console': {
                     templateUrl: 'views/dispatcher/newjob-now.html'},
@@ -345,13 +342,7 @@ angular
 
 
             }
-        });
-
-
-
-
-
-
+        })
 
 
   }]);
