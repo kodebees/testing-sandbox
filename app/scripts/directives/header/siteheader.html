@@ -16,9 +16,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a ui-sref="site.home">Home</a></li>
+                <li><a ui-sref="site.about">About</a></li>
+                <li><a ui-sref="site.faq">FAQ</a></li>
+                <li><a ui-sref="site.contact">Contact</a></li>
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -34,7 +37,7 @@
 
                           <button type="button" class="btn btn-success " ui-sref=".signupform">Signup</button>
 
-                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">SignIn <span class="caret"></span></button>
+                          <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">SignIn <span class="caret"></span></button>
                          <ul class="dropdown-menu" role="menu">
                              <li><a ui-sref=".companyLogin">Company owner</a></li>
                              <li><a ui-sref=".dispatcherLogin">Dispatcher</a></li>

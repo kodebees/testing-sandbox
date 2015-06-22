@@ -6,41 +6,61 @@
                 <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
 
+
             <li ng-class="{active: collapseVar==1}">{{dropDown}}
-                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> Settings<span
+                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> Billing<span
                         class="fa arrow"></span></a>
                 <ul class="nav nav-second-level" collapse="collapseVar!=1">
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.panels-wells">Appearence</a>
+                        <a ui-sref="dashboard.billOverView">Overview</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.buttons">Dispatch</a>
+                        <a ui-sref="dashboard.info">Info</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.settings"><i class="fa fa-table fa-fw"></i> Settings</a>
+            </li>
+
+
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.users"><i class="fa fa-table fa-fw"></i> Users</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.vehicles"><i class="fa fa-edit fa-fw"></i> Vehicles</a>
+            </li><li ui-sref-active="active">
+            <a ui-sref="dashboard.servicePincode"><i class="fa fa-edit fa-fw"></i> Service Pincodes</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="dashboard.tarrifs"><i class="fa fa-edit fa-fw"></i> Tariffs</a>
+            </li>
+
+
+
+            <li ng-class="{active: collapseVar==2}">{{dropDown}}
+                <a href="" ng-click="check(2)"><i class="fa fa-wrench fa-fw"></i> Reports<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.panels-wells">Jobs</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.notifications">Assignment</a>
+                        <a ui-sref="dashboard.buttons">Customer</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.typography">VehicleType</a>
+                        <a ui-sref="dashboard.buttons">User</a>
                     </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.buttons">Vehicle</a>
+                    </li>
+
 
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Users</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Vehicles</a>
-            </li><li ui-sref-active="active">
-            <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Service Pincodes</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Tariffs</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Reports</a>
-            </li>
-
 
 
 

@@ -41,6 +41,8 @@ angular
                                 name:'toggle-switch',
                                 files:["../bower_components/angular-toggle-switch/angular-toggle-switch.min.js",
                                     "../bower_components/angular-toggle-switch/angular-toggle-switch.css"
+
+
                                 ]
                             }),
                         $ocLazyLoad.load(
@@ -89,6 +91,25 @@ angular
                     })
                 }
             }
+        })
+        .state('site.about',{
+            url:'/',
+            controller: 'MainCtrl',
+            templateUrl:'views/site/about.html'
+
+        })
+
+        .state('site.contact',{
+            url:'/',
+            controller: 'MainCtrl',
+            templateUrl:'views/site/contact.html'
+
+        })
+        .state('site.faq',{
+            url:'/',
+            controller: 'MainCtrl',
+            templateUrl:'views/site/faq.html'
+
         })
         .state('site.signupform',{
             templateUrl:'views/registration/signupform.html',
@@ -234,75 +255,53 @@ angular
               name:'sbAdminApp',
               files:[
               'scripts/controllers/main.js',
+                  'scripts/controllers/chartContoller.js',
               'scripts/directives/timeline/timeline.js',
               'scripts/directives/notifications/notifications.js',
               'scripts/directives/chat/chat.js',
               'scripts/directives/dashboard/stats/stats.js'
-              ]
-            })
-          }
-        }
-      })
-      .state('dashboard.form',{
-        templateUrl:'views/form.html',
-        url:'/form'
-    })
-      .state('dashboard.blank',{
-        templateUrl:'views/pages/blank.html',
-        url:'/blank'
-    })
-      .state('login',{
-        templateUrl:'views/pages/dispatcher-login.html',
-        url:'/login'
-    })
-      .state('dashboard.chart',{
-        templateUrl:'views/chart.html',
-        url:'/chart',
-        controller:'ChartCtrl',
-        resolve: {
-          loadMyFile:function($ocLazyLoad) {
-            return $ocLazyLoad.load({
-              name:'chart.js',
-              files:[
-                '../bower_components/angular-chart.js/dist/angular-chart.min.js',
-                '../bower_components/angular-chart.js/dist/angular-chart.css'
+
               ]
             }),
-            $ocLazyLoad.load({
-                name:'sbAdminApp',
-                files:['scripts/controllers/chartContoller.js']
-            })
+              $ocLazyLoad.load({
+                  name:'chart.js',
+                  files:[
+                      '../bower_components/angular-chart.js/dist/angular-chart.min.js',
+                      '../bower_components/angular-chart.js/dist/angular-chart.css'
+                  ]
+              })
           }
         }
-    })
-      .state('dashboard.table',{
-        templateUrl:'views/table.html',
-        url:'/table'
-    })
-      .state('dashboard.panels-wells',{
-          templateUrl:'views/ui-elements/panels-wells.html',
-          url:'/panels-wells'
       })
-      .state('dashboard.buttons',{
-        templateUrl:'views/ui-elements/buttons.html',
-        url:'/buttons'
+      .state('dashboard.billOverView',{
+        templateUrl:'views/dashboard/bill_overview.html',
+        url:'/billoverview'
     })
-      .state('dashboard.notifications',{
-        templateUrl:'views/ui-elements/notifications.html',
-        url:'/notifications'
+      .state('dashboard.info',{
+        templateUrl:'views/dashboard/blank.html',
+        url:'/billinfo'
     })
-      .state('dashboard.typography',{
-       templateUrl:'views/ui-elements/typography.html',
-       url:'/typography'
-   })
-      .state('dashboard.icons',{
-       templateUrl:'views/ui-elements/icons.html',
-       url:'/icons'
-   })
-      .state('dashboard.grid',{
-       templateUrl:'views/ui-elements/grid.html',
-       url:'/grid'
-   })
+        .state('dashboard.settings',{
+            templateUrl:'views/dashboard/blank.html',
+            url:'/settings'
+        })
+
+        .state('dashboard.users',{
+            templateUrl:'views/dashboard/blank.html',
+            url:'/users'
+        })
+        .state('dashboard.vehicles',{
+            templateUrl:'views/dashboard/blank.html',
+            url:'/vehicles'
+        })
+        .state('dashboard.servicePincode',{
+            templateUrl:'views/dashboard/blank.html',
+            url:'/servicePincode'
+        })
+        .state('dashboard.tarrifs',{
+            templateUrl:'views/dashboard/blank.html',
+            url:'/tarrifs'
+        })
 
 
 

@@ -14,19 +14,20 @@
         <stats number="1" comments="Jobs Transfered" colour="red" type="support"></stats>
 
     </div>
+
+
+
     
     <!-- /.panel -->
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 " id="bar-chart" ng-controller="ChartCtrl">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+                <div class="panel-heading">Bar Chart</div>
+                <div class="panel-body">
+                    <canvas id="bar" class="chart chart-bar" data="bar.data" labels="bar.labels" series="bar.series"
+                            options="bar.options"></canvas>
                 </div>
-                <!-- /.panel-heading -->
-                <timeline></timeline>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
         </div>
         <!-- /.col-lg-8 -->
         <div class="col-lg-4">
@@ -35,15 +36,46 @@
                     <i class="fa fa-bell fa-fw"></i> Notifications Panel
                 </div>
                 <!-- /.panel-heading -->
-                <notifications></notifications> 
+                <notifications></notifications>
                 <!-- /.panel-body -->
             </div>
             <!-- /.panel -->
 
-            <chat></chat>
+
              <!-- /.panel .chat-panel -->
         </div>
         <!-- /.col-lg-4 -->
     </div>
     <!-- /.row -->
+
+
+
+    <div class="row">
+        <div class="col-lg-8 " id="line-chart" ng-controller="ChartCtrl">
+            <div class="panel panel-default">
+                <div class="panel-heading">Line Chart</div>
+                <div class="panel-body">
+                    <canvas id="line" class="chart chart-line chart-xl" data="line.data" labels="line.labels" legend="true"
+                            click="line.onClick" series="line.series"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+
+                <!-- /.panel-heading -->
+                <chat></chat>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+
+
+            <!-- /.panel .chat-panel -->
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+
+
 </div>
+
+
