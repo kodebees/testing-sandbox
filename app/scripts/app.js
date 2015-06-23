@@ -278,28 +278,28 @@ angular
         url:'/billoverview'
     })
       .state('dashboard.info',{
-        templateUrl:'views/dashboard/blank.html',
+        templateUrl:'views/dashboard/billinginfo.html',
         url:'/billinfo'
     })
         .state('dashboard.settings',{
-            templateUrl:'views/dashboard/blank.html',
+            templateUrl:'views/dashboard/settings.html',
             url:'/settings'
         })
 
         .state('dashboard.users',{
-            templateUrl:'views/dashboard/blank.html',
+            templateUrl:'views/registration/users.html',
             url:'/users'
         })
         .state('dashboard.vehicles',{
-            templateUrl:'views/dashboard/blank.html',
+            templateUrl:'views/registration/vehicle.html',
             url:'/vehicles'
         })
         .state('dashboard.servicePincode',{
-            templateUrl:'views/dashboard/blank.html',
+            templateUrl:'views/dashboard/servicearea.html',
             url:'/servicePincode'
         })
         .state('dashboard.tarrifs',{
-            templateUrl:'views/dashboard/blank.html',
+            templateUrl:'views/dashboard/tariff.html',
             url:'/tarrifs'
         })
 
