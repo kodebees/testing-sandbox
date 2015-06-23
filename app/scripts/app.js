@@ -108,7 +108,15 @@ angular
         .state('site.faq',{
             url:'/',
             controller: 'MainCtrl',
-            templateUrl:'views/site/faq.html'
+            templateUrl:'views/site/faq.html',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/registration/signup-ctrl.js']
+                    })
+                }
+            }
 
         })
         .state('site.signupform',{
