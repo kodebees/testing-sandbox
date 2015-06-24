@@ -294,6 +294,10 @@ angular
             templateUrl:'views/dashboard/vehicle.html',
             url:'/vehicles'
         })
+        .state('dashboard.vehiclestype',{
+            templateUrl:'views/dashboard/vehicletypes.html',
+            url:'/vehiclestype'
+        })
         .state('dashboard.servicePincode',{
             templateUrl:'views/dashboard/servicearea.html',
             url:'/servicePincode'
