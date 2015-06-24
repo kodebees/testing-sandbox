@@ -1,32 +1,47 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="$dismiss('cancel')"><span aria-hidden="true">&times;</span></button>
+    <h1>Closed Jobs</h1>
+</div>
+
+
+<div class="modal-body">
 <div class="table-responsive">
 <table class="table table-hover  table-bordered">
         <thead>
         <tr>
-            <th></th>
+            <th>Id</th>
             <th>Closed</th>
             <th>Filed</th>
             <th>Pick Up</th>
             <th>Drop Off</th>
             <th>Passenger</th>
-            <th>Car</th>
+            <th>Vehicle</th>
             <th>Driver</th>
-            <th>Source</th>
             <th>Reason</th>
         </tr>
         </thead>
         <tbody>
         <tr>
+            <th>6321</th>
+<!--
             <td> <span class="glyphicons glyphicons-search"></span> <span class="glyphicons glyphicons-refresh"></span></td>
+-->
             <td>17/6 11:00</td>
             <td>17/6 11:00</td>
             <td>Kottur</td>
             <td>Adyar</td>
             <td>Kathir,9159053006</td>
-            <td>1</td>
+            <td>Incdica A/c</td>
             <td>John</td>
-            <td>Manual</td>
             <td>dropped off</td>
         </tr>
         </tbody>
     </table>
+</div>
+    </div>
+
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>

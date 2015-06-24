@@ -108,15 +108,7 @@ angular
         .state('site.faq',{
             url:'/',
             controller: 'MainCtrl',
-            templateUrl:'views/site/faq.html',
-            resolve: {
-                loadMyFile:function($ocLazyLoad) {
-                    $ocLazyLoad.load({
-                        name:'sbAdminApp',
-                        files:['scripts/controllers/registration/signup-ctrl.js']
-                    })
-                }
-            }
+            templateUrl:'views/site/faq.html'
 
         })
         .state('site.signupform',{
@@ -310,6 +302,14 @@ angular
             templateUrl:'views/dashboard/tariff.html',
             url:'/tarrifs'
         })
+        .state('dashboard.linkedcompany',{
+            templateUrl:'views/dashboard/linkedcompanies.html',
+            url:'/linkedcompany'
+        })
+
+
+
+
 
 
 
@@ -336,15 +336,18 @@ angular
                 },
                 // for column two, we'll define a separate controller
                 'newJob@dispatch_console': {
-                    templateUrl: 'views/dispatcher/newjob-now.html'},
+                templateUrl: 'views/dispatcher/newjob-now.html'},
                     /*controller: 'scotchController'*/
+                'map@dispatch_console': {
+                templateUrl: 'views/dispatcher/map.html'},
 
+                'jobDetails@dispatch_console': {
+                templateUrl: 'views/dispatcher/active-assigned-unassignedjobs.html'
+                },
 
-                    'map@dispatch_console': {
-                        templateUrl: 'views/dispatcher/map.html'},
+                'vehicle@dispatch_console':{
+                templateUrl: 'views/dispatcher/jobassignedvehicles.html'
 
-                        'jobDetails@dispatch_console': {
-                            templateUrl: 'views/dispatcher/active-assigned-unassignedjobs.html'
                 }
 
 
@@ -353,5 +356,7 @@ angular
 
 
   }]);
+
+
 
     

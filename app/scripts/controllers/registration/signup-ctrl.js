@@ -12,7 +12,6 @@ angular.module('sbAdminApp')
 
         $scope.register = function () {
             var url = window.location;
-            alert("Res");
 
             $state.go('site.register1');
         }

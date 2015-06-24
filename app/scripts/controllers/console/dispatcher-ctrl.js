@@ -10,12 +10,13 @@ angular.module('sbAdminApp', ['ui.bootstrap'])
 
   .controller('DispatchCtrl', ['$scope', '$timeout','$state','$modal', function ($scope, $timeout,$state,$modal,$modalInstance) {
 console.log("DispatcerhCtrl");
+
 $scope.searchJobs = function(){
     console.log("creating customer");
     var modalInstance = $modal.open({
         animation: true,
-        templateUrl: 'views/dispatcher/vehicleassignedjobs.html',
-        // controller: 'ModalInstanceCtrl',
+        templateUrl: 'views/dispatcher/searchjobs.html',
+        controller: 'ModalInstanceCtrl',
         size: 'lg'
 
     });
@@ -28,11 +29,10 @@ $scope.searchJobs = function(){
 
 
         $scope.closedJobs = function(){
-            console.log("creating customer");
             var modalInstance = $modal.open({
                 animation: true,
                 templateUrl: 'views/dispatcher/closedjobs.html',
-                // controller: 'ModalInstanceCtrl',
+                controller: 'ModalInstanceCtrl',
                 size: 'lg'
 
             });
@@ -44,14 +44,12 @@ $scope.searchJobs = function(){
         }
 
         $scope.createCustomer = function(){
-            console.log("creating customer");
-
 
             var customerModalInstance = $modal.open({
                 animation: true,
                 templateUrl: 'views/dispatcher/searchcustomer.html',
                 controller: 'ModalInstanceCtrl',
-                size: 'lg',
+                size: 'lg'
 
 
             });
@@ -62,44 +60,13 @@ $scope.searchJobs = function(){
             });
         }
 
-        $scope.alarms = function(){
-            console.log("creating customer");
-            var modalInstance = $modal.open({
-                animation: true,
-                templateUrl: 'views/dispatcher/searchcustomer.html',
-                // controller: 'ModalInstanceCtrl',
-                size: 'lg'
 
-            });
-            modalInstance.result.then(function (selectedItem) {
-                $scope.selected = selectedItem;
-            }, function () {
-                console.log('Modal dismissed at: ' + new Date());
-            });
-        }
-
-        $scope.messages = function(){
-            console.log("creating customer");
-            var modalInstance = $modal.open({
-                animation: true,
-                templateUrl: 'views/dispatcher/searchcustomer.html',
-                // controller: 'ModalInstanceCtrl',
-                size: 'lg'
-
-            });
-            modalInstance.result.then(function (selectedItem) {
-                $scope.selected = selectedItem;
-            }, function () {
-                console.log('Modal dismissed at: ' + new Date());
-            });
-        }
 
         $scope.alerts = function(){
-            console.log("creating customer");
             var modalInstance = $modal.open({
                 animation: true,
-                templateUrl: 'views/dispatcher/searchcustomer.html',
-                // controller: 'ModalInstanceCtrl',
+                templateUrl: 'views/dispatcher/alert.html',
+                controller: 'ModalInstanceCtrl',
                 size: 'lg'
 
             });
@@ -115,7 +82,10 @@ $scope.searchJobs = function(){
 
 
 
-    }]) .controller('ModalInstanceCtrl', ['$scope', '$timeout','$state','$modal','$modalInstance', function ($scope, $timeout,$state,$modal,$modalInstance) {
+    }])
+
+
+    .controller('ModalInstanceCtrl', ['$scope', '$timeout','$state','$modal','$modalInstance', function ($scope, $timeout,$state,$modal,$modalInstance) {
         console.log("Modal instance");
         $scope.ok = function () {
             console.log("Modal instance ok ");
