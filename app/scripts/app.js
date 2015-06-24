@@ -287,11 +287,11 @@ angular
         })
 
         .state('dashboard.users',{
-            templateUrl:'views/registration/users.html',
+            templateUrl:'views/dashboard/users.html',
             url:'/users'
         })
         .state('dashboard.vehicles',{
-            templateUrl:'views/registration/vehicle.html',
+            templateUrl:'views/dashboard/vehicle.html',
             url:'/vehicles'
         })
         .state('dashboard.servicePincode',{
@@ -306,6 +306,15 @@ angular
             templateUrl:'views/dashboard/linkedcompanies.html',
             url:'/linkedcompany'
         })
+        .state('dashboard.jobsreport',{
+            templateUrl:'views/dashboard/jobsreport.html',
+            url:'/jobsreport'
+        })
+        .state('dashboard.customer-report',{
+            templateUrl:'views/dashboard/customer-report.html',
+            url:'/customer-report'
+        })
+
 
 
 
