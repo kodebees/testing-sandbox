@@ -152,3 +152,24 @@ navbar
     color: #F8F8F8;
 
 }*/
+.container {
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-perspective: 600px;
+}
+.container .flip {
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 1s ease-in-out;
+}
+.container .flip.ng-enter {
+    -webkit-transform: rotateY(-180deg);
+}
+.container .flip.ng-enter-active {
+    -webkit-transform: rotateY(0deg);
+}
+.container .flip.ng-leave {
+    -webkit-transform: rotateY(0deg);
+}
+.container .flip.ng-leave-active {
+    -webkit-transform: rotateY(180deg);
+}
