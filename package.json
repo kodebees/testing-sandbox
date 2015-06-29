@@ -1,10 +1,7 @@
 {
   "name": "sb-admin",
   "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/start-angular/sb-admin-angular"
-  },
+
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",

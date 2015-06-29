@@ -3,22 +3,26 @@
         <ul class="nav in" id="side-menu">
            <!-- <sidebar-search></sidebar-search>-->
             <li ui-sref-active="active">
-                <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i>Company Dashboard</a>
+                <a ui-sref="cp-dashboard.home"><i class="fa fa-dashboard fa-fw"></i>CP Dashboard</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="cp-dashboard.settings"><i class="fa fa-wrench fa-fw"></i> Settings</a>
             </li>
 
 
-            <li ng-class="{active: collapseVar==1}">{{dropDown}}
-                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> Billing<span
-                        class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=1">
-                    <li ui-sref-active="active">
-                        <a ui-sref="dashboard.billOverView">Overview</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="dashboard.info">Info</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
+
+            <!-- <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                 <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> Billing<span
+                         class="fa arrow"></span></a>
+                 <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                     <li ui-sref-active="active">
+                         <a ui-sref="dashboard.billOverView">Overview</a>
+                     </li>
+                     <li ui-sref-active="active">
+                         <a ui-sref="dashboard.info">Info</a>
+                     </li>
+                 </ul>
+                 &lt;!&ndash; /.nav-second-level &ndash;&gt;
             </li>
 
             <li ui-sref-active="active">
@@ -68,9 +72,9 @@
 
 
                 </ul>
-                <!-- /.nav-second-level -->
+                &lt;!&ndash; /.nav-second-level &ndash;&gt;
             </li>
-
+-->
 
 
 

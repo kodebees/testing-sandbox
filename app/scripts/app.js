@@ -107,6 +107,7 @@ angular
 
 
 
+
         .state('site.register1',{
             templateUrl:'views/registration/activate.html',
             url:'/activate',
@@ -290,6 +291,194 @@ angular
 
 
 
+        //channel partner dashboard state
+
+        .state('cpLogin',{
+            templateUrl:'views/cp-dashboard/cp-login.html',
+            url:'/cplogin'
+        })
+
+
+
+        .state('cp-dashboard', {
+            url:'/cp-dashboard',
+
+            templateUrl: 'views/cp-dashboard/main.html',
+            resolve: {
+                loadMyDirectives:function($ocLazyLoad){
+                    return $ocLazyLoad.load(
+                        {
+                            name:'sbAdminApp',
+                            files:[
+                                'scripts/directives/header/header.js',
+                                'scripts/directives/header/header-notification/header-notification.js',
+                                'scripts/directives/sidebar/sidebar.js',
+                                'scripts/directives/sidebar/sidebar-search/sidebar-search.js'
+                            ]
+                        })
+                }
+            }
+        })
+        .state('cp-dashboard.home',{
+            url:'/cp-home',
+            controller: 'MainCtrl',
+            templateUrl:'views/cp-dashboard/home.html',
+            resolve: {
+                loadMyFiles:function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:[
+                            'scripts/controllers/main.js',
+                            'scripts/controllers/chartContoller.js',
+                            'scripts/directives/notifications/notifications.js',
+                            'scripts/directives/chat/chat.js',
+                            'scripts/directives/dashboard/stats/stats.js'
+
+                        ]
+                    }),
+                        $ocLazyLoad.load({
+                            name:'chart.js',
+                            files:[
+                                '../bower_components/angular-chart.js/dist/angular-chart.min.js',
+                                '../bower_components/angular-chart.js/dist/angular-chart.css'
+                            ]
+                        })
+                }
+            }
+        })
+
+        .state('cp-dashboard.settings',{
+            templateUrl:'views/cp-dashboard/settings.html',
+            url:'/cp-settings'
+        })
+
+
+
+
+
+
+        //vendor  dashboard state
+
+        .state('site.vendorLogin',{
+            templateUrl:'views/vendor-dashboard/vendor-login.html',
+            url:'/vendorlogin'
+        })
+
+
+
+        .state('vendor-dashboard', {
+            url:'/vendor-dashboard',
+
+            templateUrl: 'views/vendor-dashboard/main.html',
+            resolve: {
+                loadMyDirectives:function($ocLazyLoad){
+                    return $ocLazyLoad.load(
+                        {
+                            name:'sbAdminApp',
+                            files:[
+                                'scripts/directives/header/header.js',
+                                'scripts/directives/header/header-notification/header-notification.js',
+                                'scripts/directives/sidebar/sidebar.js',
+                                'scripts/directives/sidebar/sidebar-search/sidebar-search.js'
+                            ]
+                        })
+                }
+            }
+        })
+        .state('vendor-dashboard.home',{
+            url:'/vendor-home',
+            controller: 'MainCtrl',
+            templateUrl:'views/vendor-dashboard/home.html',
+            resolve: {
+                loadMyFiles:function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:[
+                            'scripts/controllers/main.js',
+                            'scripts/controllers/chartContoller.js',
+                            'scripts/directives/timeline/timeline.js',
+                            'scripts/directives/notifications/notifications.js',
+                            'scripts/directives/chat/chat.js',
+                            'scripts/directives/dashboard/stats/stats.js'
+
+                        ]
+                    }),
+                        $ocLazyLoad.load({
+                            name:'chart.js',
+                            files:[
+                                '../bower_components/angular-chart.js/dist/angular-chart.min.js',
+                                '../bower_components/angular-chart.js/dist/angular-chart.css'
+                            ]
+                        })
+                }
+            }
+        })
+
+
+//admin dashboard state
+
+            .state('adminLogin',{
+                templateUrl:'views/admin-dashboard/admin-login.html',
+                url:'/adminlogin'
+            })
+
+
+
+            .state('admin-dashboard', {
+                url:'/admin-dashboard',
+
+                templateUrl: 'views/admin-dashboard/main.html',
+                resolve: {
+                    loadMyDirectives:function($ocLazyLoad){
+                        return $ocLazyLoad.load(
+                            {
+                                name:'sbAdminApp',
+                                files:[
+                                    'scripts/directives/header/header.js',
+                                    'scripts/directives/header/header-notification/header-notification.js',
+                                    'scripts/directives/sidebar/sidebar.js',
+                                    'scripts/directives/sidebar/sidebar-search/sidebar-search.js'
+                                ]
+                            })
+                    }
+                }
+            })
+            .state('admin-dashboard.home',{
+                url:'/admin-home',
+                controller: 'MainCtrl',
+                templateUrl:'views/admin-dashboard/home.html',
+                resolve: {
+                    loadMyFiles:function($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            name:'sbAdminApp',
+                            files:[
+                                'scripts/controllers/main.js',
+                                'scripts/controllers/chartContoller.js',
+                                'scripts/directives/timeline/timeline.js',
+                                'scripts/directives/notifications/notifications.js',
+                                'scripts/directives/chat/chat.js',
+                                'scripts/directives/dashboard/stats/stats.js'
+
+                            ]
+                        }),
+                            $ocLazyLoad.load({
+                                name:'chart.js',
+                                files:[
+                                    '../bower_components/angular-chart.js/dist/angular-chart.min.js',
+                                    '../bower_components/angular-chart.js/dist/angular-chart.css'
+                                ]
+                            })
+                    }
+                }
+            })
+        .state('admin-dashboard.settings',{
+            templateUrl:'views/admin-dashboard/settings.html',
+            url:'/admin-settings'
+        })
+        .state('admin-dashboard.cp',{
+            templateUrl:'views/admin-dashboard/cp.html',
+            url:'/admin-cp'
+        })
 
 
 
@@ -309,7 +498,7 @@ angular
                             return $ocLazyLoad.load({
                                 name:'sbAdminApp',
                                 files:[
-                                    'scripts/controllers/console/dispatcher-ctrl.js',
+                                    'scripts/controllers/console/dispatcher-ctrl.js'
                                 ]
                             })
 
