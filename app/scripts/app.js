@@ -274,6 +274,10 @@ angular
             templateUrl:'views/dashboard/tariff.html',
             url:'/tarrifs'
         })
+        .state('dashboard.package',{
+            templateUrl:'views/dashboard/packagetariff.html',
+            url:'/packages'
+        })
         .state('dashboard.linkedcompany',{
             templateUrl:'views/dashboard/linkedcompanies.html',
             url:'/linkedcompany'
@@ -409,6 +413,11 @@ angular
                         })
                 }
             }
+        })
+
+        .state('vendor-dashboard.settings',{
+            templateUrl:'views/vendor-dashboard/settings.html',
+            url:'/vendor-settings'
         })
 
 
