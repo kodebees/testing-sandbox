@@ -7,17 +7,15 @@
     </div>
     <!-- /.row -->
     <div class="row">
-        
-        <stats number="10" comments="Total no of Companies" colour="primary" type="comments"></stats>
-        <stats number="4" comments="No of Service District" colour="primary" type="user"></stats>
-        <stats number="2" comments="xxxx" colour="yellow" type="shopping-cart"></stats>
-        <stats number="1,00,000" comments="Total Billed Amount" colour="red" type="support"></stats>
+
+        <stats number="10" comments="Total Completed Jobs" colour="primary" type="comments"></stats>
+        <stats number="4" comments="Active Jobs" colour="primary" type="user"></stats>
+        <stats number="2" comments="Jobs in Qeue" colour="yellow" type="shopping-cart"></stats>
+        <stats number="1,000" comments="Total Billed Amount" colour="red" type="support"></stats>
 
     </div>
 
 
-
-    
     <!-- /.panel -->
     <div class="row">
         <div class="col-lg-8 " id="bar-chart" ng-controller="ChartCtrl">
@@ -42,12 +40,11 @@
             <!-- /.panel -->
 
 
-             <!-- /.panel .chat-panel -->
+            <!-- /.panel .chat-panel -->
         </div>
         <!-- /.col-lg-4 -->
     </div>
     <!-- /.row -->
-
 
 
     <div class="row">
@@ -55,7 +52,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Line Chart</div>
                 <div class="panel-body">
-                    <canvas id="line" class="chart chart-line chart-xl" data="line.data" labels="line.labels" legend="true"
+                    <canvas id="line" class="chart chart-line chart-xl" data="line.data" labels="line.labels"
+                            legend="true"
                             click="line.onClick" series="line.series"></canvas>
                 </div>
             </div>
@@ -63,17 +61,17 @@
         <!-- /.col-lg-8 -->
         <div class="col-lg-4">
 
-                <!-- /.panel-heading -->
-                <chat></chat>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-
-
-            <!-- /.panel .chat-panel -->
+            <!-- /.panel-heading -->
+            <chat></chat>
+            <!-- /.panel-body -->
         </div>
-        <!-- /.col-lg-4 -->
+        <!-- /.panel -->
+
+
+        <!-- /.panel .chat-panel -->
     </div>
+    <!-- /.col-lg-4 -->
+</div>
 
 
 </div>
