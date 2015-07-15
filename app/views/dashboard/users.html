@@ -12,10 +12,10 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    <a href="" class="list-group-item">1.Kathir Dispather</a>
-                    <a href="" class="list-group-item">2. John Driver</a>
+                    <a href="" class="list-group-item" data-ng-repeat="user in user.details">
+                        {{user.name + "," + user.role}}
+                    </a>
                 </div>
-
             </div>
             </div>
         <div class="text-center">
@@ -37,13 +37,13 @@
                             <label for="Roles" class="col-sm-5 control-label">Roles:</label>
                             <div class="col-sm-3">
                                 <div class="checkbox checkbox-inline">
-                                     <input type="checkbox">Driver
+                                     <input type="checkbox" >Driver
                                 </div>
                                <div class="checkbox checkbox-inline">
-                                    <input type="checkbox">Dispatcher
+                                    <input type="checkbox" >Dispatcher
                                 </div>
                                 <div class="checkbox checkbox-inline">
-                                    <input type="checkbox">Vendor
+                                    <input type="checkbox" >Vendor
                                 </div>
                             </div>
                         </div>

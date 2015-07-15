@@ -38,12 +38,9 @@
                             </div>
                             <div class="form-group">
                                 <label>Country</label>
-                                <select class="form-control">
-                                    <option>India</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                                <select class="form-control" ng-model="country">
+                                    <option value="">-- Select a Country --</option>
+                                    <option ng-repeat="country in countries" value="{{country.code}}">{{country.name}}</option>
                                 </select>
                             </div>
                             <div class="form-group">

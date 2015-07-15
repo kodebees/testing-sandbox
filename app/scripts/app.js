@@ -256,7 +256,16 @@ angular
 
         .state('dashboard.users',{
             templateUrl:'views/dashboard/users.html',
-            url:'/users'
+            url:'/users',
+            controller:'user1Ctrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/dashboard/user1-ctrl.js']
+                    })
+                }
+            }
         })
         .state('dashboard.vehicles',{
             templateUrl:'views/dashboard/vehicle.html',
