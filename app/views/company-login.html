@@ -3,27 +3,54 @@
         <div class="col-md-4 col-md-offset-4">
             <div class=" login-panel panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Please Sign In as Company</h3>
+                    <h3 class="panel-title">Login</h3>
                 </div>
-                <div class="panel-body">
-                    <form role="form">
-                        <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                <div class="panel-body text-center">
+                    <form role="form" class="form-horizontal">
+                        <h2>Find Your Site</h2>
+                        <p>To login to your site, just provide us with your email
+                        <br>
+                        address and we will find your site.<br><br>
+                        </p>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input class="form-control" placeholder="Enter your email" name="email" type="email" autofocus>
                             </div>
-                            <div class="form-group">
+                            </div>
+                           <!-- <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" value="">
                             </div>
                             <div class="checkbox">
                                 <label>
                                     <input name="remember" type="checkbox" value="Remember Me">Remember Me
                                 </label>
-                            </div>
+                            </div>-->
                             <!-- Change this to a button or input when using this as a form -->
-                            <a ui-sref="dashboard.home" class="btn btn-lg btn-success btn-block">Login</a>
-                        </fieldset>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                            <a href="" ng-click="showme=true" class="btn btn-lg btn-success btn-block">Find My Site</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
+            </div>
+            </div>
+
+            <div class="col-xs-3">
+            <div ng-show="showme">
+                <div class="panel panel-primary" data-ng-repeat="login in login.company">
+                    <div class="panel-heading">
+                               <i class="fa fa-user fa-5x"></i>
+                                <h3>{{login.companyname}}</h3>
+                    </div>
+                    <a href="#" ui-sref="dashboard.home">
+                        <div class="panel-footer">
+                            <span class="pull-left">{{login.url}}</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
