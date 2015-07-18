@@ -315,7 +315,10 @@ angular
                 }
             }
         })
-
+        .state('dashboard.companyjobs',{
+            templateUrl:'views/dashboard/companyjobs.html',
+            url:'/vehicles'
+        })
         .state('dashboard.vehicles',{
             templateUrl:'views/dashboard/vehicle.html',
             url:'/vehicles'
