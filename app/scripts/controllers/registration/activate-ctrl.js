@@ -10,7 +10,7 @@ angular.module('sbAdminApp')
   .controller('ActivateCtrl', ['$scope', '$timeout','$state', function ($scope, $timeout,$state) {
 $scope.activate=function(){
 
-     $state.go('site.formwizard.company');
+     $state.go('dashboard.home');
 }
 
   }]);

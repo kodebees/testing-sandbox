@@ -96,7 +96,16 @@ angular
 
         .state('site.companyLogin',{
             templateUrl:'views/company-login.html',
-            url:'/companylogin'
+            url:'/companylogin',
+            controller:'companyLoginCtrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/registration/companylogin-ctrl.js']
+                    })
+                }
+            }
         })
 
         .state('site.dispatcherLogin',{
@@ -267,6 +276,46 @@ angular
                 }
             }
         })
+        .state('dashboard.vendor',{
+            templateUrl:'views/dashboard/vendor.html',
+            url:'/vendor',
+            controller:'vendorCtrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/dashboard/vendor-ctrl.js']
+                    })
+                }
+            }
+        })
+        .state('dashboard.transportadmin',{
+            templateUrl:'views/dashboard/transportadmin.html',
+            url:'/transportadmin',
+            controller:'transportadminCtrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/dashboard/transportadmin-ctrl.js']
+                    })
+                }
+            }
+        })
+        .state('dashboard.helpdesk',{
+            templateUrl:'views/dashboard/helpdesk.html',
+            url:'/helpdesk',
+            controller:'helpdesk1Ctrl',
+            resolve: {
+                loadMyFile:function($ocLazyLoad) {
+                    $ocLazyLoad.load({
+                        name:'sbAdminApp',
+                        files:['scripts/controllers/dashboard/helpdesk-ctrl.js']
+                    })
+                }
+            }
+        })
+
         .state('dashboard.vehicles',{
             templateUrl:'views/dashboard/vehicle.html',
             url:'/vehicles'

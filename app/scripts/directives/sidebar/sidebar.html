@@ -25,15 +25,26 @@
                 <a ui-sref="dashboard.settings"><i class="fa fa-table fa-fw"></i> Settings</a>
             </li>
 
-            <li ui-sref-active="active">
+            <!--<li ui-sref-active="active">
                 <a ui-sref="dashboard.linkedcompany"><i class="fa fa-table fa-fw"></i> Linked Companies</a>
+            </li>-->
+            <li ng-class="{active: collapseVar==2}">{{dropDown}}
+                <a href="" ng-click="check(2)"><i class="fa fa-wrench fa-fw"></i> Users<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.vendor">Vendor</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.transportadmin">Transport Admin</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.helpdesk">Helpdesk</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
             </li>
 
-
-
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.users"><i class="fa fa-table fa-fw"></i> Users</a>
-            </li>
             <li ui-sref-active="active">
                 <a ui-sref="dashboard.vehiclestype"><i class="fa fa-edit fa-fw"></i> Vehicles Type</a>
             </li>
@@ -52,10 +63,10 @@
 
 
 
-            <li ng-class="{active: collapseVar==2}">{{dropDown}}
-                <a href="" ng-click="check(2)"><i class="fa fa-wrench fa-fw"></i> Reports<span
+            <li ng-class="{active: collapseVar==3}">{{dropDown}}
+                <a href="" ng-click="check(3)"><i class="fa fa-wrench fa-fw"></i> Reports<span
                         class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                <ul class="nav nav-second-level" collapse="collapseVar!=3">
                     <li ui-sref-active="active">
                         <a ui-sref="dashboard.jobsreport">Jobs</a>
                     </li>
