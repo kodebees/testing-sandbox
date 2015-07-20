@@ -317,11 +317,23 @@ angular
         })
         .state('dashboard.companyjobs',{
             templateUrl:'views/dashboard/companyjobs.html',
-            url:'/vehicles'
+            url:'/companyjobs'
+        })
+        .state('dashboard.vendorjobs',{
+            templateUrl:'views/dashboard/vendorjobs.html',
+            url:'/vendorjobs'
         })
         .state('dashboard.vehicles',{
             templateUrl:'views/dashboard/vehicle.html',
             url:'/vehicles'
+        })
+        .state('dashboard.tripsheet',{
+            templateUrl:'views/dashboard/tripsheet.html',
+            url:'/tripsheet'
+        })
+        .state('dashboard.search',{
+            templateUrl:'views/dashboard/search.html',
+            url:'/search'
         })
         .state('dashboard.vehiclestype',{
             templateUrl:'views/dashboard/vehicletypes.html',
